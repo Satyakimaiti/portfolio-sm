@@ -13,13 +13,13 @@ export const AnimatedBorderButton = () => {
         >
             {/* Animated SVG Border */}
             <svg
-                className="absolute left-0 top-0 w-full h-full pointer-events-none"
+                className="absolute left-0 top-0 w-full h-full pointer-events-auto"
                 viewBox="0 0 200 60"
                 preserveAspectRatio="none"
                 style={{overflow: "visible"}}
             >
                 <path
-                    d="M5 5 H195 A5 5 0 0 1 200 10 V50 A5 5 0 0 1 195 55 H5 A5 5 0 0 1 0 50 V10 A5 5 0 0 1 5 5 Z"
+                    d="M 30,1 H 170 A 29,29 0 0 1 170,59 H 30 A 29,29 0 0 1 30,1 Z"
                     fill="none"
                     stroke="var(--color-primary)"
                     strokeWidth="2"
