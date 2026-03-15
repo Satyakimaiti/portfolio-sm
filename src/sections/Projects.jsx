@@ -1,4 +1,5 @@
 import { ArrowUpRight, Github } from "lucide-react";
+import { AnimatedBorderButton } from "@/components/AnimatedBorderButton"
 
 const projects = [
     {
@@ -7,6 +8,7 @@ const projects = [
             "Built a Generative AI tool using Llama 3 and Streamlit that translates natural language into executable code with live syntax highlighting.",
         image: "/proj1.jpg",
         tags: ["Llama 3", "Ollama", "Python", "Streamlit", "Prompt Engineering"],
+        link: "#",
         github: "#",
     },
     {
@@ -15,6 +17,7 @@ const projects = [
             "Developed a full-stack system utilizing ResNet-50 and EfficientNet models for real-time plant disease classification and soil-based crop recommendation.",
         image: "/proj2.jpg",
         tags: ["React.js", "Deep Learning", "ResNet-50", "Flask/FastAPI", "Computer Vision"],
+        link: "https://smart-agriculture-red.vercel.app/",
         github: "#",
     },
     {
@@ -23,6 +26,7 @@ const projects = [
             "Implemented a computer vision system that leverages specialized neural networks to track and analyze human skeletal landmarks for real-time motion assessment.",
         image: "/proj3.png",
         tags: ["OpenCV", "Mediapipe", "Computer Vision", "Python", "Neural Networks"],
+        link: "#",
         github: "#",
     },
     {
@@ -31,6 +35,7 @@ const projects = [
             "Engineered a personalized discovery engine using collaborative and content-based filtering to analyze user preferences and predict high-accuracy movie matches.",
         image: "/proj4.png",
         tags: ["Python", "Scikit-Learn", "Pandas", "Collaborative Filtering", "Data Science"],
+        link: "#",
         github: "#",
     },
 ];
@@ -83,17 +88,20 @@ export const Projects = () => {
                             </div>
 
                             {/* Overlay Links */}
-                            {/* <div className="relative inset-0 flex-items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                {/* <a >
-                                    <ArrowUpRight />
-                                </a> */}
-                                {/* <a
+                            <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <a 
+                                    href={project.link} 
+                                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                                >
+                                    <ArrowUpRight className="w-5 h-5" />
+                                </a> 
+                                 <a
                                     href={project.github}
                                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                                 >
-                                    <Github className="w-5 h-5"/>
+                                    <Github className="w-5 h-5" />
                                 </a>
-                            </div>  */} 
+                            </div>  
 
                             {/* Content */}
                             <div className="p-6 space-y-4">
@@ -123,6 +131,14 @@ export const Projects = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* View All CTA */}
+                <div className="text-center mt-12 animate-fade-in animation-delay-500">
+                    <AnimatedBorderButton onClick={() => window.open('https://github.com/Satyakimaiti', '_blank')}>
+                        View All Projects
+                        <ArrowUpRight className="w-5 h-5" />
+                    </AnimatedBorderButton>
                 </div>
             </div>
         </section>
