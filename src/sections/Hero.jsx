@@ -21,6 +21,15 @@ const skills = [
 ];
 
 export const Hero = () => {
+
+    const scrollToAbout = (e) => {
+        e.preventDefault();
+        const aboutSection = document.getElementById("about");
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden">
             {/* Bg */}
@@ -86,9 +95,11 @@ export const Hero = () => {
 
                         {/* CTAs */}
                         <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                            <Button size="lg">
-                                Contact Me <ArrowRight className="w-5 h-5" />
-                            </Button>
+                            <a href="#contact">
+                                <Button size="lg">
+                                    Contact Me <ArrowRight className="w-5 h-5" />
+                                </Button>
+                            </a>
                             <AnimatedBorderButton
                                 href="/ResumeUpdated_withPhoto.pdf"
                                 download={"ResumeUpdated_withPhoto.pdf"}
@@ -172,15 +183,16 @@ export const Hero = () => {
                 </div>
             </div>
 
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30
             animate-fade-in animation-delay-800">
-                <a
-                    href="#about"
+                <button
+                    // href="#about"
+                    onClick={scrollToAbout}
                     className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary"
                 >
                     <span className="text-xs uppercase tracking-wider">Scroll</span>
                     <ChevronDown className="w-6 h-6 animate-bounce" />
-                </a>
+                </button>
             </div>
         </section>
     );
