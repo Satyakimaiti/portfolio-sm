@@ -26,14 +26,14 @@ Responsive Design: Fully optimized for mobile, tablet, and desktop viewports.
 🚀 Getting Started
 To run this project locally, follow these steps:
 
-1. Clone the repository
+1. Clone the repository:-
 Bash
 git clone https://github.com/Satyakimaiti/your-repo-name.git
 cd your-repo-name
-2. Install dependencies
+2. Install dependencies:-
 Bash
 npm install
-3. Set up Environment Variables
+3. Set up Environment Variables:-
 Create a .env file in the root directory and add your EmailJS credentials:
 
 Code snippet
@@ -46,7 +46,7 @@ npm run dev
 The site will be live at http://localhost:5173.
 
 📂 Project Structure
-Plaintext
+
 ├── public/               # Static assets (CV, Hero Images)
 ├── src/
 │   ├── components/       # Reusable UI components (Button, Navbar, etc.)
