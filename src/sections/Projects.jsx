@@ -8,7 +8,7 @@ const projects = [
             "Built a Generative AI tool using Llama 3 and Streamlit that translates natural language into executable code with live syntax highlighting.",
         image: "/proj1.jpg",
         tags: ["Llama 3", "Ollama", "Python", "Streamlit", "Prompt Engineering"],
-        link: "#",
+        link: "https://ai-code-generator-s17.streamlit.app/",
         github: "#",
     },
     {
@@ -81,7 +81,7 @@ export const Projects = () => {
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div
-                                    className="absolute inset-o
+                                    className="absolute inset-0
                                     bg-linear-to-t from-card via-card/50
                                     to-transparent opacity-60" 
                                 />
